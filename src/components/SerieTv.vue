@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cocontainer">
         <h2>Serie Tv</h2>
         <div class="container">
             <Serie :serie="element" v-for="(element,index) in serieTv" :key="index"/>
@@ -45,10 +45,9 @@ export default {
 <style lang="scss" scoped>
 .container{
     display: flex;
+    flex-wrap: wrap;
     p{
         color: red;
     }
-    height: 200px;
-    width: 200px;
 }
 </style>

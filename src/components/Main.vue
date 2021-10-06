@@ -44,10 +44,9 @@ export default {
 <style lang="scss" scoped>
 .container{
     display: flex;
+    flex-wrap: wrap;
     p{
         color: red;
     }
-    height: 200px;
-    width: 200px;
 }
 </style>
