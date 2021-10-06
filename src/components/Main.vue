@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="abc">
+      <div class="container">
           <Film :info="element" v-for="(element,index) in filmsEmpty" :key="index"/>
           <p>{{resultsearch}}</p>
       </div>
@@ -22,7 +22,8 @@ export default {
             filmsEmpty: []
         }
     },
-    updated(){
+    watch:{
+    resultsearch: function(){
         axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
             api_key: "524f90be698385fdda5e6bb6a3c59608",
@@ -30,16 +31,20 @@ export default {
             lenguage: "it-IT" 
         }
     })
-    .then((resp) =>{
+        .then((resp) =>{
             this.filmsEmpty = resp.data.results;
             console.log(this.filmsEmpty);
         })
     }
 }
+}
+
+
 </script>
 
 <style lang="scss" scoped>
-.abc{
+.container{
+    display: flex;
     p{
         color: red;
     }

@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-      <div class="card">
-          <img src="" alt="">
-          <h4 class="title">{{info.title}}</h4>
-          <h4>{{info.original_title}}</h4>
-          <h4>{{info.original_language}}</h4>
-          <h4>{{info.vote_average}}</h4>
-      </div>
-  </div>
+    <div class="card">
+        <img src="" alt="">
+        <div>
+            <h4 class="title"><span>Titolo :</span>{{info.title}}</h4>
+            <h4><span>Titolo originale:</span> {{info.original_title}}</h4>
+            <h4><span>Lingua:</span> {{info.original_language}}</h4>
+            <h4><span>Voto:</span> {{info.vote_average}}</h4>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -21,8 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
-    display: flex;
+span{
+    color: red;
+    font-size: 20px;
 }
 .card{
     width: 12.5rem;
