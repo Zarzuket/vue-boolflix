@@ -5,9 +5,9 @@
             <div>
                 <h4 class="title"><span>Titolo :</span>{{info.title}}</h4>
                 <h4><span>Titolo originale:</span> {{info.original_title}}</h4>
-                <h4 v-if="`${info.original_language} == 'ita'`"><span>Lingua:</span><img src="../assets/img/it.svg" alt=""></h4>
-                <h4 v-else-if="`${info.original_language} == 'en'`"><span>Lingua:</span><img src="../assets/img/en.jpg" alt=""></h4>
-                <h4 v-else><span>Lingua:</span><img src="../assets/img/missing_flag.jpg" alt=""></h4>
+                <h4 v-if="info.original_language == 'it'"><span>Lingua:</span><img src="../assets/img/it.svg" alt=""></h4>
+                <h4 v-else-if="info.original_language == 'en'"><span>Lingua:</span><img src="../assets/img/en.jpg" alt=""></h4>
+                <h4 v-else><span>Lingua:</span><img src="../assets/img/Flag_missing.jpg" alt=""></h4>
                 
                 <h4><span>Voto:</span> {{info.vote_average}}</h4>
             </div>
