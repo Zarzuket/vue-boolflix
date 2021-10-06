@@ -28,7 +28,6 @@ export default {
   methods:{
     sendsearch(abba){
       this.resultsearch = abba;
-      console.log(this.resultsearch)
     }
   }
 }

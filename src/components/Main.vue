@@ -2,7 +2,6 @@
   <div>
       <div class="container">
           <Film :info="element" v-for="(element,index) in filmsEmpty" :key="index"/>
-          <p>{{resultsearch}}</p>
       </div>
   </div>
 </template>

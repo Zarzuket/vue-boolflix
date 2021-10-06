@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <h2>Serie Tv</h2>
         <div class="container">
             <Serie :serie="element" v-for="(element,index) in serieTv" :key="index"/>
       <!-- <p>{{resultsearch}}</p> -->

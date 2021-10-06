@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <div class="card">
+    <div class="card">
+        <div class="info">
             <img src="" alt="">
-            <div>
+                <div>
                 <h4 class="title"><span>Titolo :</span>{{serie.name}}</h4>
                 <h4><span>Titolo originale:</span> {{serie.original_title}}</h4>
                 <h4><span>Lingua:</span> {{serie.original_language}}</h4>
@@ -31,5 +31,10 @@ span{
     width: 12.5rem;
     height: 12.5rem;
     border: 1px solid green;
+    .info{
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+    }
 }
 </style>
