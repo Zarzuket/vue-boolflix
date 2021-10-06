@@ -1,11 +1,13 @@
 <template>
-    <div class="card">
-        <img src="" alt="">
-        <div>
-            <h4 class="title"><span>Titolo :</span>{{info.title}}</h4>
-            <h4><span>Titolo originale:</span> {{info.original_title}}</h4>
-            <h4><span>Lingua:</span> {{info.original_language}}</h4>
-            <h4><span>Voto:</span> {{info.vote_average}}</h4>
+    <div>
+        <div class="card">
+            <img src="" alt="">
+            <div>
+                <h4 class="title"><span>Titolo :</span>{{info.title}}</h4>
+                <h4><span>Titolo originale:</span> {{info.original_title}}</h4>
+                <h4><span>Lingua:</span> {{info.original_language}}</h4>
+                <h4><span>Voto:</span> {{info.vote_average}}</h4>
+            </div>
         </div>
     </div>
 </template>

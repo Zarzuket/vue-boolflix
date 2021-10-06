@@ -2,18 +2,21 @@
   <div id="app">
     <Header @sendsearch="sendsearch"/>
     <Main :resultsearch="resultsearch"/>
+    <SerieTv :resultsearch="resultsearch"/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
+import SerieTv from "./components/SerieTv.vue"
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    SerieTv
     
 
   },
