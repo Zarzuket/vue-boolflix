@@ -2,7 +2,9 @@
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img :src="`http://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="Image Not Found">
+                <!-- <img :src="`http://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="Image Not Found"> -->
+                <img v-if="serie.poster_path" :src="`https://image.tmdb.org/t/p/w342${serie.poster_path}`">
+                <img v-else src="../assets/img/no_image.jpg" alt="">
             </div>
             <div class="flip-card-back">
                 <h4 class="title"><span>Titolo :</span>{{serie.name}}</h4>

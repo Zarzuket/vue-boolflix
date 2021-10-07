@@ -1,7 +1,8 @@
 <template>
     <div class="card">
         <div class="info">
-            <img :src="`http://image.tmdb.org/t/p/w342/${info.poster_path}`" alt="Image Not Found">
+                <img v-if="info.poster_path" :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`">
+                <img v-else src="../assets/img/no_image.jpg" alt="">
             <div>
                 <h4 class="title"><span>Titolo :</span>{{info.title}}</h4>
                 <h4><span>Titolo originale:</span> {{info.original_title}}</h4>
