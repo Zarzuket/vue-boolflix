@@ -4,7 +4,7 @@
           LOGO
       </div>
       <input type="text" v-model="search">
-      <button @click="$emit('sendsearch' , search)">Esegui Ricerca</button>
+      <button @click="$emit('sendsearch' , search)" @>Esegui Ricerca</button>
   </nav>
 </template>
 

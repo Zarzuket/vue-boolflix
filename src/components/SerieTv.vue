@@ -44,8 +44,11 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+
+    margin: 1.525rem .625rem;
+    width: calc(100% / 5 - 1.25rem);
     p{
         color: red;
     }
