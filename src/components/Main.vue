@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="cocontainer">
+        <div>
+            <h2>Film</h2>
+        </div>
+    </div>
       <div class="container">
           <Film :info="element" v-for="(element,index) in filmsEmpty" :key="index"/>
       </div>
@@ -42,6 +47,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cocontainer{
+    display: flex;
+    justify-content: space-around;
+    h2{
+        font-size: 4.875rem;
+        color: red;
+        box-shadow: 5px 10px 18px red;
+    }
+}
 .container{
     display: flex;
     flex-wrap: wrap;

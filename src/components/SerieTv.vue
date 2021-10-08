@@ -1,17 +1,20 @@
 <template>
-    <div class="cocontainer">
-        <h2>Serie Tv</h2>
-        <div class="container">
-            <Serie :serie="element" v-for="(element,index) in serieTv" :key="index"/>
-      <!-- <p>{{resultsearch}}</p> -->
+    <div>
+        <div class="cocontainer">
+            <div>
+                <h2>SERIE TV</h2>
+            </div>
         </div>
+            <div class="container">
+                <Serie :serie="element" v-for="(element,index) in serieTv" :key="index"/>
+            </div>
+
     </div>
 </template>
 
 <script>
 import Serie from "./Serie.vue"
 import axios from "axios"
-
 export default {
     name: "SerieTv",
     props:["resultsearch"],
@@ -43,12 +46,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cocontainer{
+    display: flex;
+    justify-content: center;
+    h2{
+        color: green;
+        font-size: 4.875rem;
+        color: green;
+        box-shadow: 5px 10px 18px green;
+    }
+}
 .container{
-    // display: flex;
-    // flex-wrap: wrap;
-
-    margin: 1.525rem .625rem;
-    width: calc(100% / 5 - 1.25rem);
+    display: flex;
+    flex-wrap: wrap;
     p{
         color: red;
     }

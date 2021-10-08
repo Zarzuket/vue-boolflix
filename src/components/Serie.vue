@@ -1,8 +1,8 @@
 <template>
     <div class="card">
         <div class="show">
-            <img :src="`https://image.tmdb.org/t/p/w342${serie.poster_path}`" :alt="serie.name">
-            <!-- <img v-else src="../assets/img/no_image.jpg" alt=""> -->
+            <img v-if="serie.poster_path" :src="`https://image.tmdb.org/t/p/w342${serie.poster_path}`">
+            <img v-else src="../assets/img/no_f_img.png" alt="" >
         </div>
         <div class="card_info">
             <h4 class="title"><span>Titolo :</span>{{serie.name}}</h4>
@@ -16,8 +16,6 @@
 </template>
 
 <script>
-
-
 export default {
     name:"Serie",
     props: ["serie"],
@@ -30,26 +28,22 @@ methods:{
 </script>
 
 <style lang="scss" scoped>
-
 .card{
     overflow: hidden;
     position: relative;
     height: 100%;
+    margin: 1.525rem .625rem;
     
-
     .flag_img{
         width: 15%;
     }
-
     .show {
     display: flex;
     height: 100%;
-
     img {
         object-fit: cover;
         width: 100%;
     }
-
 }
 }
     .card_info {
@@ -61,21 +55,15 @@ methods:{
         height: 100%;
         background: rgba(0,0,0,0.8);
         opacity: 0;
+        border: .0625rem solid green;
     }
-
 .card_info:hover{
     opacity: 1;
+    padding: 1.25rem;
+    color: white;
 }
-
 span{
     color: red;
     font-size: 20px;
 }
-
-// .card_info{
-//     display: none;
-// }
-// .card:hover .show{
-//     display: none;
-// }
 </style>
