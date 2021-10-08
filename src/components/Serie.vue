@@ -2,7 +2,7 @@
     <div class="card">
         <div class="show">
             <img v-if="serie.poster_path" :src="`https://image.tmdb.org/t/p/w342${serie.poster_path}`">
-            <img v-else src="../assets/img/no_f_img.png" alt="" >
+            <img v-else src="../assets/img/no_img.jpeg" alt="" >
         </div>
         <div class="card_info">
             <h4 class="title"><span>Titolo :</span>{{serie.name}}</h4>
@@ -31,7 +31,7 @@ methods:{
 .card{
     overflow: hidden;
     position: relative;
-    height: 100%;
+    object-fit: cover;
     margin: 1.525rem .625rem;
     
     .flag_img{
