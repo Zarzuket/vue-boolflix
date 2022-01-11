@@ -1,14 +1,30 @@
-// reset
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+
+// VARIABLES
+$redColor: #DB202C;
+
+// RESET
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.fa-star{
-    color: yellow;
+// SCROLLBAR
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
 }
-body{
-    height: 100vh;
-    background-color: rgb(20,20,20);
+::-webkit-scrollbar-thumb {
+    background: $redColor;
+    border-radius: 2.5px;
+}
+
+// COMMON
+body {
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+li {
+    list-style: none;
 }

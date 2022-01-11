@@ -1,48 +1,46 @@
 <template>
-  <nav>
-      <div class="logo">
-          <h1>BOOLFLIX</h1>
-      </div>
-      <input type="text" v-model="search" placeholder="Inserisci il film da cercare">
-      <button @click="$emit('sendsearch' , search)" @>Esegui Ricerca</button>
-  </nav>
+    <header>
+        <img src="https://fontmeme.com/permalink/211006/c072857f28ffed69c9266a55183f4c20.png" alt="Boolflix Logo">
+        <form>
+            <input v-model="userInput" type="text" placeholder="Cerca un film o una serie">
+            <button @click.prevent="$emit('search', userInput)">CERCA</button>
+        </form>
+    </header>
 </template>
 
 <script>
 export default {
-name: "Header",
-data(){
-    return{
-        search: "",
+    name: 'Header',
+    data() {
+        return {
+            userInput: ''
+        }
     }
-}
 }
 </script>
 
 <style lang="scss" scoped>
-nav{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    padding: 1.25rem 1.25rem;
-    h1{
-        color: red;
-        box-shadow: 5px 10px 18px red;
+@import '../assets/style/common.scss';
+    header {
+        display: flex;
+        background-color: #222;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        input {
+            width: 200px;
+            height: 35px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        button {
+            padding: 5px 25px;
+            border-radius: 5px;
+            margin: 0 20px;
+            background-color: $redColor;
+            color: #222;
+            font-weight: bold;
+            border: none;
+        }
     }
-    input{
-        margin-left: auto;
-        height: 2.25rem;
-        outline: none;
-        background-color: grey;
-        color: red;
-        background-color: black;
-    }
-    button{
-        height: 2.25rem;
-        color: red;
-        background-color: black;
-        box-shadow: 5px 10px 18px red;;
-    }
-}
-
 </style>
